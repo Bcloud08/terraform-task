@@ -1,9 +1,15 @@
-1) Watch terraform-05 video.
-2) Execute the script shown in video.
-3) Create one ec2 instance with httpd installed using terraform script.
-4) Setup s3 as backend to the task 3.
-5) Setup dynamo db locking for task3.
-6) Watch terraform-06 video.
-7) Execute the script shown in video.
-8) Provision ec2,s3 and vpc using Terraform modules.
-9) Provision ec2 for 3 different environments (Dev, Staging and Prod) using terraform workspaces.
+Terraform Task:
+===============
+1) Create VPC
+2) Create Internet gateway
+3) Create Custom Route Table
+4) Create Subnet
+5) Associate subnet with Route Table
+6) Create Security Group to allow port 22.80,443
+7) Create a network interface with an ip in the subnet that was created in step 4
+8) Assign an elastic IP to the network interface created in step 7
+9) Create Ubuntu server and install/enable apache2
+
+Note: 
+1) Create single main.tf which will be created the above resources and do not hardcode the id's.
+2) Configure s3 as backend and dynamo db locking for multi user execution.
